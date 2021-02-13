@@ -9,49 +9,71 @@ body {
     background: url('../images/hero_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 2em;
     color: white;
     text-align: left;
-    padding: 2em;
-    padding-bottom: 4em;
 } 
 
 header{
-    padding-top: 2em;
-    display: flex;
+    padding: 2em;
 }
 
-.logo{
-    padding: 1.5em;
-    padding-bottom: 4em;
+header .logo{
+    float: left;
     color: #494949;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-header ul{
-    list-style: none;
-    display: flex;
-    margin-left: 8em;
+header nav {
+    float:right;
+    margin-right:1em;
+    position: relative;
 }
 
-ul li{
+header button{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    cursor: pointer; 
+}
+
+header ul{
+    background-color: rgba(0, 0, 0, 0.589);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    list-style: none;
+    position: absolute;
+    right: 5%;
+    z-index: 1;
+    border-radius: 0.5em;
+    padding-inline-start: 0;
+    min-width: 10em;
+    display: none;
+}
+
+header li{
     padding:1.5em;
+    text-align: center;
+}
+
+header li:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+    border-radius: 0.5em;
 }
 
 header a{
     color: white;
     font-weight: normal;
     text-decoration: none;
+    font-size: 1.1em;
 }
 
 
-section{
-    margin: 0 1em;
-    padding: 5em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+section.top{
     position: relative;
+    padding: 2em;
+    margin: 5em 0;
 }
 
 section::before{
@@ -60,8 +82,8 @@ section::before{
     width: 250px;
     height: 6px;
     background: linear-gradient(90deg, rgba(255, 55, 197, 0.8) 0%, rgba(255, 55, 197, 0) 106.23%);
-    top: 0; 
-    margin-left:0;
+    top: -1em; 
+    left:0;
 }
 
 section::after{
@@ -71,14 +93,14 @@ section::after{
     height: 6px;
     background: linear-gradient(90deg, rgba(255, 55, 197, 0.8) 0%, rgba(255, 55, 197, 0) 106.23%);
     transform: rotate(-180deg);
-    bottom: 0; 
-    margin-left:20em;
+    bottom: -1em; 
+    right: 0;
 }
 
 .top h1{
     font-size: 4rem;
     font-weight: bold;
-    margin-bottom: 0;
+
 }
 
 .top h1 span{
@@ -88,6 +110,7 @@ section::after{
 .top-bg p{
     font-weight: normal;
 }
+
 
 input[type=button]{
     background-color: white;
@@ -101,21 +124,22 @@ input[type=button]{
     cursor: pointer; 
 }
 
-
 input[type=button]:hover{
     background-color: rgba(255, 255, 255, 0.603);
 }
 
+
 .top{
-    animation: fadeIn 2s forwards;
+    animation: fadeIn 1s forwards;
 
 }
+
 .overlay{
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,.8);
-    z-index: 1;
+    z-index: 2;
     place-content: center;
     color: white;
     font-size: 3rem;
