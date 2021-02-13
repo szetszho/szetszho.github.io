@@ -9,6 +9,7 @@ body {
     background: url('../images/hero_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
     padding: 2em;
     color: white;
     text-align: left;
@@ -84,6 +85,7 @@ section::before{
     background: linear-gradient(90deg, rgba(255, 55, 197, 0.8) 0%, rgba(255, 55, 197, 0) 106.23%);
     top: -1em; 
     left:0;
+    animation: fadeIn 1s forwards;
 }
 
 section::after{
@@ -95,20 +97,22 @@ section::after{
     transform: rotate(-180deg);
     bottom: -1em; 
     right: 0;
+    animation: fadeIn 1s forwards;
 }
 
 .top h1{
     font-size: 4rem;
     font-weight: bold;
-
+    animation: fadeIn 1s forwards;
 }
 
 .top h1 span{
     display: block;
 }
 
-.top-bg p{
+.top p{
     font-weight: normal;
+    animation: fadeIn 1s forwards;
 }
 
 
@@ -122,17 +126,13 @@ input[type=button]{
     border-radius:  2em;;
     border: none;
     cursor: pointer; 
+    animation: fadeIn 1s forwards;
 }
 
 input[type=button]:hover{
     background-color: rgba(255, 255, 255, 0.603);
 }
 
-
-.top{
-    animation: fadeIn 1s forwards;
-
-}
 
 .overlay{
     position: absolute;
