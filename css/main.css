@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+body { 
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+.hero-bg {
+    background: url('../images/hero_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: left;
+    padding: 2em;
+    padding-bottom: 4em;
+} 
+
+header{
+    padding-top: 2em;
+    display: flex;
+}
+
+.logo{
+    padding: 1.5em;
+    padding-bottom: 4em;
+    color: #494949;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    margin-left: 8em;
+}
+
+ul li{
+    padding:1.5em;
+}
+
+header a{
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+
+section{
+    margin: 0 1em;
+    padding: 5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+section::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 6px;
+    background: linear-gradient(90deg, rgba(255, 55, 197, 0.8) 0%, rgba(255, 55, 197, 0) 106.23%);
+    top: 0; 
+    margin-left:0;
+}
+
+section::after{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 6px;
+    background: linear-gradient(90deg, rgba(255, 55, 197, 0.8) 0%, rgba(255, 55, 197, 0) 106.23%);
+    transform: rotate(-180deg);
+    bottom: 0; 
+    margin-left:20em;
+}
+
+.top h1{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.top h1 span{
+    display: block;
+}
+
+.top-bg p{
+    font-weight: normal;
+}
+
+input[type=button]{
+    background-color: white;
+    color: #ff37c5;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius:  2em;;
+    border: none;
+    cursor: pointer; 
+}
+
+
+input[type=button]:hover{
+    background-color: rgba(255, 255, 255, 0.603);
+}
+
+.top{
+    animation: fadeIn 2s forwards;
+
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 1;
+    place-content: center;
+    color: white;
+    font-size: 3rem;
+    display: none;
+    opacity: 0;
+}
+
+.animate-overlay{
+    animation: overlay 3s forwards;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity:0;
+        transform: translateY(-2em);
+
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes overlay{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
