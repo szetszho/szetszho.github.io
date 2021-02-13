@@ -93,8 +93,7 @@ section::after{
     position: absolute;
     width: 250px;
     height: 6px;
-    background: linear-gradient(90deg, rgba(255, 55, 197, 0.8) 0%, rgba(255, 55, 197, 0) 106.23%);
-    transform: rotate(-180deg);
+    background: linear-gradient(-90deg, rgba(255, 55, 197, 0.8) 0%, rgba(255, 55, 197, 0) 106.23%);
     bottom: -1em; 
     right: 0;
     animation: fadeIn 1s forwards;
